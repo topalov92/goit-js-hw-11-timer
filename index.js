@@ -1,7 +1,7 @@
 class CountdownTimer {
   constructor({ targetDate, selector }) {
     this.targetDate = targetDate.getTime();
-    this.selector = selector.slice(1);
+    this.selector = selector;
 
     this.timer = document.querySelector(".timer");
     this.days = document.querySelector('[data-value="days"]');
@@ -17,8 +17,8 @@ class CountdownTimer {
 
     setInterval(
       () => {
-        const correntTime = Date.now();
-        const deltaTime = this.targetDate - correntTime;
+        const currentTime = Date.now();
+        const deltaTime = this.targetDate - currentTime;
         const { days, hours, mins, secs } = this.getTimeComponents(deltaTime);
 
         this.days.textContent = days;
@@ -47,7 +47,15 @@ class CountdownTimer {
   }
 }
 
-const timer1 = new CountdownTimer({
+const timer = new CountdownTimer({
   selector: "#timer-1",
   targetDate: new Date("Feb 28, 2022"),
 });
+
+ run() {
+    this.currentTime = setInterval(() => {
+      if (Date.now() > this.targetDate) {
+        alert(`${this.selector}: THE END`);
+        this.stop();
+        return;
+      }}
