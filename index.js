@@ -51,11 +51,3 @@ const timer = new CountdownTimer({
   selector: "#timer-1",
   targetDate: new Date("Feb 28, 2022"),
 });
-
- run() {
-    this.currentTime = setInterval(() => {
-      if (Date.now() > this.targetDate) {
-        alert(`${this.selector}: THE END`);
-        this.stop();
-        return;
-      }}
