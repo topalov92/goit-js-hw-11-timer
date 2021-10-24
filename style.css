@@ -12,7 +12,7 @@ body {
   margin: 40px 0px 20px;
 }
 
-.countdown {
+.timer {
   font-family: sans-serif;
   color: #fff;
   display: inline-block;
@@ -21,21 +21,22 @@ body {
   font-size: 30px;
 }
 
-.countdown-number {
+.field {
   padding: 10px;
+  margin: 5px;
   border-radius: 3px;
   background: #00bf96;
   display: inline-block;
 }
 
-.countdown-time {
+.value {
   padding: 15px;
   border-radius: 3px;
   background: #00816a;
   display: inline-block;
 }
 
-.countdown-text {
+.lable {
   display: block;
   padding-top: 5px;
   font-size: 16px;
